@@ -72,6 +72,8 @@ import java.net.*;
 
          try {
            String line = inp.readLine();
+		 
+		if(expected_responce.equalsIgnoreCase(line.substring(0,expected_response.length() ) ) ){ 
 
             System.out.println(line);
              return ;
