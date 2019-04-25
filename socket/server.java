@@ -6,15 +6,15 @@ public class server {
 
 	public static void main (String[] args) throws IOException{
 
-	  ServerSocket syima=new ServerSocket(7000);
-	Socket shahfiq=syima.accept();
+	  ServerSocket servr=new ServerSocket(7000);
+	Socket s =servr.accept();
      System.out.println ("client connected");
      InputStreamReader gt= new 
-	InputStreamReader(shahfiq.getInputStream());
+	InputStreamReader(s.getInputStream());
 	BufferedReader ot = new BufferedReader(gt);
 
  	
-       PrintWriter rp= new PrintWriter(shahfiq.getOutputStream());
+       PrintWriter rp= new PrintWriter(s.getOutputStream());
        rp.println("whatup");
        rp.flush();
 
